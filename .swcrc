@@ -4,20 +4,20 @@
       "syntax": "typescript",
       "tsx": false
     },
-    "target": "es3",
+    "target": "es2022",
     "loose": false,
     "minify": {
-      "compress": false,
+      "compress": true,
       "mangle": false
     }
   },
   "module": {
-    "type": "commonjs",
+    "type": "es6",
     "noInterop": false
   },
   "sourceMaps": false,
   "inlineSourcesContent": false,
-  "minify": false,
+  "minify": true,
   "env": {
     "targets": {
       "node": "16"
