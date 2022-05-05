@@ -1,6 +1,6 @@
-const { swc } = require('rollup-plugin-swc3')
-const { preserveShebangs } = require('rollup-plugin-preserve-shebangs')
-const fs = require('fs')
+import { swc } from 'rollup-plugin-swc3'
+import { preserveShebangs } from 'rollup-plugin-preserve-shebangs'
+import fs from 'fs'
 
 const swcrc = JSON.parse(fs.readFileSync('./.swcrc'))
 
@@ -10,7 +10,7 @@ export default {
     file: './bin/index.js',
     format: 'cjs'
   },
-  external: ['yargs'],
+  external: ['yargs', 'child_process'],
   plugins: [
     preserveShebangs(),
     swc({

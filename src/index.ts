@@ -6,6 +6,7 @@ import create from './commands/create'
 const argv = yargs
   .usage('usage: $0 <command>')
   .command(create)
+  .help()
   .command(add)
   .help()
   .wrap(null)
